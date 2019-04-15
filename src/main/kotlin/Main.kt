@@ -12,7 +12,8 @@ fun main(args: Array<String>) {
 
     app.get("/", { req, res ->
         res.type("text/plain")
-        res.send(Message("i am a beautiful butterfly"))
+        val messageText = HelloWorld().greeting
+        res.send(Message(messageText))
     })
 
 
